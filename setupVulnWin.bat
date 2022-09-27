@@ -181,6 +181,7 @@ echo.
 call :color 0f "[*] Enabling AlwaysInstallElevated via registry.."
 echo.
 reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v "AlwaysInstallElevated" /t REG_DWORD /d 1 /f >nul
+reg add HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v "AlwaysInstallElevated" /t REG_DWORD /d 1
 call :color 0f "[*] Final configuration will run upon restart..."
 echo.
 call :color 0a "[+] Registry (AlwaysInstallElevated) configuration complete."
